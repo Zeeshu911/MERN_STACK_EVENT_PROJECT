@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  background: #fff7ea;
+}
+.container {
+  min-width: 1500px;
+  max-width: 1500px;
+  margin: 0 auto;
+  font-family: "Nunito Sans", sans-serif;
+}
+@media (max-width: 1520px) {
+  .container {
+    min-width: 100%;
+    padding: 20px;
+  }
+}
+
+nav {
+  display: flex;
+  max-width: 1500px;
+  min-width: 1500px;
+  padding: 25px 10px 40px 10px;
+  margin-bottom: 25px;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin: 0 auto;
+}
+nav::after {
+  content: "";
+  position: absolute;
+  height: 0.6px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(201, 201, 201);
+}
+nav .logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+nav .navLinks {
+  flex: 2;
+}
+nav .navLinks {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav .navLinks .links {
+  display: flex;
+  gap: 25px;
+}
+nav .navLinks .links a {
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 1.4px;
+  font-size: 24px;
+}
+nav .navLinks .links a:hover {
+  transition: 0.3s;
+  cursor: pointer;
+}
+nav .hamburger {
+  display: none;
+}
+nav svg {
+  font-size: 1.75rem;
+}
+@media (max-width: 1520px) {
+  nav {
+    min-width: 100%;
+    padding: 25px 20px 40px 20px;
+  }
+}
+@media (max-width: 1100px) {
+  nav {
+    z-index: 20;
+    position: unset;
+    background: #ffffff63;
+    padding: 10px 30px;
+  }
+  nav::after {
+    content: "";
+    display: none;
+  }
+  nav .hamburger {
+    display: flex;
+  }
+  nav .navLinks {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: -100%;
+    background: #a2783a;
+    width: 100%;
+    left: 0;
+    padding: 15px 7.5px;
+    z-index: -1;
+    transition: 0.3s;
+  }
+  nav .showmenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 67px;
+    background: #a2783a;
+    left: 0;
+    padding: 15px 7.5px;
+    transition: 0.3s;
+    margin: 0 15px;
+    width: 96.7vw;
+    margin-right: 30px;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    z-index: 2;
+  }
+  nav .showmenu .links {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav .navLinks .links a {
+    color: #fff;
+  }
+}
+@media (max-width: 800px) {
+  nav .showmenu {
+    width: 96vw;
+  }
+}
+@media (max-width: 650px) {
+  nav .showmenu {
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+.hero {
+  position: relative;
+  height: 800px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.hero .item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: #fff;
+  position: relative;
+  padding: 50px 20px;
+}
+.hero .item h3 {
+  font-family: "Alex Brush", cursive;
+  color: #a2783a;
+  font-weight: 300;
+  font-size: 28px;
+}
+.hero .item div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.hero .item div h1 {
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+.hero .item div p {
+  color: gray;
+  font-size: 16px;
+}
+.hero .item div a {
+  padding: 10px 30px;
+  color: #fff;
+  background: #000;
+  width: fit-content;
+  cursor: default;
+}
+@media (max-width: 620px) {
+  .hero {
+    padding: 0 20px;
+  }
+  .hero .item {
+    width: 100%;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contact .banner {
+  display: flex;
+  gap: 30px;
+}
+.contact .banner .item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #a2783a;
+  padding: 15px 0;
+  border-radius: 7px;
+}
+.contact .banner .item h4 {
+  font-weight: 300;
+  font-family: "Alex Brush", cursive;
+  font-size: 2rem;
+}
+.contact .banner .item p {
+  color: gray;
+}
+.contact .banner:last-child .item {
+  border: none;
+}
+.contact .banner:last-child .item form {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact .banner:last-child .item form div {
+  display: flex;
+  gap: 20px;
+}
+.contact .banner:last-child .item form div input {
+  flex: 1;
+}
+.contact .banner:last-child .item form h2 {
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+.contact .banner:last-child .item form input,
+.contact .banner:last-child .item form textarea {
+  padding: 8px;
+  background: transparent;
+  border: 1px solid #a2783a;
+  border-radius: 7px;
+}
+.contact .banner:last-child .item form button {
+  padding: 10px 60px;
+  font-size: 24px;
+  color: #fff;
+  background: #a2783a;
+  font-weight: 300;
+  font-family: "Alex Brush", cursive;
+  border: none;
+  width: fit-content;
+}
+.contact .banner:last-child .item form input:focus,
+.contact .banner:last-child .item form textarea:focus {
+  outline: none;
+}
+@media (max-width: 830px) {
+  .contact .banner {
+    flex-direction: column;
+  }
+}
+@media (max-width: 640px) {
+  .contact .banner:last-child .item form {
+    padding: 0;
+  }
+  .contact .banner:last-child .item form div {
+    flex-direction: column;
+  }
+}
+
+footer {
+  padding: 50px 20px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+footer .banner {
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .banner .title {
+  text-align: center;
+}
+footer .banner .title h1 {
+  font-size: 40px;
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+footer .banner .title p {
+  color: #a2783a;
+  font-family: "Alex Brush", cursive;
+  font-size: 24px;
+}
+footer .banner .tag {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+footer .banner .tag div {
+  display: flex;
+  gap: 5px;
+}
+footer .banner .tag div input {
+  flex: 1;
+  border-radius: 8px;
+  padding: 6px;
+  background: transparent;
+  border: 1px solid #fff7ea;
+}
+footer .banner .tag div input:focus {
+  outline: none;
+}
+footer .banner .tag p {
+  text-align: center;
+}
+footer .banner .tag div button {
+  background: #fff7ea;
+  border: 1px solid #fff7ea;
+  padding: 7px 15px;
+  border-radius: 8px;
+}
+@media (max-width: 500px) {
+  footer .banner .tag div {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+.about {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+.about h4 {
+  color: #a2783a;
+  font-family: "Alex Brush", cursive;
+  font-weight: 200;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.about h2 {
+  color: #000;
+  font-weight: 200;
+  font-size: 32px;
+  margin-bottom: 20px;
+  letter-spacing: 4px;
+}
+.about p {
+  line-height: 36px;
+  letter-spacing: 2px;
+  word-spacing: 6px;
+}
+.services {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+.services h2 {
+  color: #000;
+  font-weight: 200;
+  font-size: 32px;
+  margin-bottom: 20px;
+  letter-spacing: 4px;
+}
+.services .banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 20px;
+}
+.services .banner .item {
+  display: flex;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+.services .banner .item img {
+  width: 100%;
+  height: 100%;
+}
+.services .banner .item h3 {
+  position: absolute;
+  background: #fff7ea;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 300;
+  color: #a2783a;
+  bottom: -200%;
+  transition: 0.3s;
+}
+.services .banner .item:hover h3 {
+  bottom: 0;
+  transition: 0.3s;
+}
+@media (max-width: 1280px) {
+  .services .banner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+}
